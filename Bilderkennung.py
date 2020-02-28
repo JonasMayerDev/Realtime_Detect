@@ -48,7 +48,7 @@ transform = transforms.Compose([
 
 if rospy.has_param("/model_name"):
     model_name = rospy.get_param("/model_name")
-    path = sys.path[0]+"/../../../../Models/"
+    path = sys.path[0]+"/../../../../Models/"+model_name+"/"
     #path = sys.path[0]+"/Models/"
     try:
         modelUClasses = torch.load(path+model_name+".pt")

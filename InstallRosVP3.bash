@@ -1,7 +1,7 @@
 cd $1
 
-. VirtualPython3/bin/activate
-cd ./VirtualPython3
+. $1/VirtualPython3/bin/activate
+cd $1/VirtualPython3
 
 PKGS="opencv-python Pillow pandas rospkg catkin_pkg"
 
