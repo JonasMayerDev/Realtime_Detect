@@ -19,9 +19,9 @@ class Installer(QObject):
         self.progressBarInstall.emit(1)
 
         if checkBoxROS.isChecked():
-            answerRos=os.system("/bin/bash "+sys.path[0]+"/../"+"InstallRos.bash "+sys.path[0]+"/..")
+            answerRos=os.system("/bin/bash "+sys.path[0]+"/../realtime_detect/"+"InstallRos.bash "+sys.path[0]+"/..")
             self.progressBarInstall.emit(50)
-            awnserRosVP3=os.system("/bin/bash "+sys.path[0]+"/../"+"InstallRosVP3.bash "+sys.path[0]+"/..")
+            awnserRosVP3=os.system("/bin/bash "+sys.path[0]+"/../realtime_detect/"+"InstallRosVP3.bash "+sys.path[0]+"/..")
         else: 
             print("Bitte wählen sie eine Option")
         self.progressBarInstall.emit(100)
