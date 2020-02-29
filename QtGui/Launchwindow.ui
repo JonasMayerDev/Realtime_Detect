@@ -136,6 +136,9 @@
      <property name="text">
       <string>System Kamera</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QRadioButton" name="radioButton_2">
      <property name="enabled">
