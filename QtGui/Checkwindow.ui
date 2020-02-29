@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>643</width>
-    <height>150</height>
+    <height>175</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>110</y>
+      <y>140</y>
       <width>191</width>
       <height>21</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>140</y>
       <width>211</width>
       <height>21</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>110</y>
+      <y>140</y>
       <width>161</width>
       <height>21</height>
      </rect>
@@ -114,13 +114,31 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>140</y>
       <width>211</width>
       <height>21</height>
      </rect>
     </property>
     <property name="value">
      <number>24</number>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>611</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ROS muss wie hier beschrieben installiert sein: &lt;a href=&quot; https://www.theconstructsim.com/how-to-install-ros-on-ubuntu/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Install Ros &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot; https://www.theconstructsim.com/how-to-install-ros-on-ubuntu/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot; https://www.theconstructsim.com/how-to-install-ros-on-ubuntu/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Es werden nur zusatzpackete basierend auf ros installiert!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

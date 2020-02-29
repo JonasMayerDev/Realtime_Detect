@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import sys,os
-from PyQt5.QtWidgets import QApplication, QMainWindow,QWidget,QCheckBox,QRadioButton,QSlider
+from PyQt5.QtWidgets import QApplication, QMainWindow,QWidget,QCheckBox,QRadioButton,QSlider,QComboBox
 from PyQt5 import uic
+sys.path.append(sys.path[0]+"/../realtime_detect/QtGui")
+import Finishwindow 
+FinishWindow = Finishwindow.Finishwindow()
 
 class Launchwindow:
     
@@ -14,8 +17,17 @@ class Launchwindow:
         self.doubleSpinBoxSchwelle = self.Launchwindow.doubleSpinBoxSchwelle
         self.pushButtonWeiter = self.Launchwindow.pushButtonWeiter
         self.radioButtonSysKam = self.Launchwindow.frame.findChild(QRadioButton,"radioButton1")
-        self.comboBoxSysKam = self.Launchwindow.frame.findChild(QRadioButton,"comboBox_2")
+        self.comboBoxSysKam = self.Launchwindow.frame.findChild(QComboBox,"comboBox_2")
         self.pushButtonSave.setText("Save Name")
+
+        matching = [s for s in os.listdir("/dev") if "video" in s]
+        for i in matching:
+            if i.find("video")==0:
+                self.comboBoxSysKam.addItem(i)
+
+        models = os.listdir(sys.path[0]+"/../Models")
+        for i in models:
+            self.comboBoxModel.addItem(i)
 
 
         def lock_name():
@@ -38,13 +50,41 @@ class Launchwindow:
     
 
     def weiter(self):
-        if "ros_ws" in os.listdir(sys.path[0]+"/.."):
-            print("contin")
+        try:
+            modelname = self.comboBoxModel.itemText(self.comboBoxModel.currentIndex())
+        except:
+            modelname = ""
+            print("Please select an Model") 
+
+        try:
+            KNum = self.comboBoxSysKam.itemText(self.comboBoxSysKam.currentIndex())[5:]
+            print(KNum)
+            int(KNum)
+        except:
+            KNum = ""
+            print(KNum)
+            print("Please connect an Kamera and make shure its appearing in /dev ant it follows the rule: videoNUMBER") 
+
+
+        if modelname == "" or not self.wasNameSet or KNum == "":
+
+            print("Failed: please retry ")
+
         else:
-            self.create_ros_ws()
-            self.create_ros_pack()
-            self.move_files_in_pack()
-            self.source_all()
+
+            if "ros_ws" in os.listdir(sys.path[0]+"/.."):
+                print("contin")
+            else:
+                self.create_ros_ws()
+                self.create_ros_pack()
+                self.move_files_in_pack()
+                self.source_all()
+            if not "launch" in os.listdir(sys.path[0]+"/../ros_ws/src/realtime_detect"):
+                os.system("mkdir "+sys.path[0]+"/../ros_ws/src/realtime_detect/launch")
+            
+            self.create_launchfile()
+            FinishWindow.Finishwindow.show()
+            self.Launchwindow.close()
 
 
 
@@ -111,6 +151,32 @@ class Launchwindow:
                 . """+path+"""/ros_ws/devel/setup.sh """
         anwser = os.popen(cmd)
         print(anwser)
+
+    def create_launchfile(self):
+        path2 = sys.path[0]+"/.."
+
+        if self.radioButtonSysKam.isChecked():
+
+            KNum = self.comboBoxSysKam.itemText(self.comboBoxSysKam.currentIndex())[5:]
+            
+            f = open(path2+"""/ros_ws/src/realtime_detect/launch/"""+self.lineEditName.text()+".launch", "a")
+            f.write("""<?xml version="1.0"?> <launch> <rosparam param="kamera_number">"""+str(KNum)+"""</rosparam>
+            <node name="KameraTreiberSys" pkg="realtime_detect" type="KameraTreiberSys.py"> </node> """)
+            f.close()
+        else: 
+            print("something else than sys kam is not implmented")
+
+        modelname = self.comboBoxModel.itemText(self.comboBoxModel.currentIndex())
+
+        f = open(path2+"""/ros_ws/src/realtime_detect/launch/"""+self.lineEditName.text()+".launch", "a")
+        f.write(""" <rosparam param="model_name">"""+str(modelname)+"""</rosparam> 
+        <node pkg="realtime_detect" name="Bilderkennung" type="Bilderkennung.py"> </node></launch>""")
+        f.close()
+
+        
+        
+        
+
         
         
 
