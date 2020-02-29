@@ -76,17 +76,20 @@ def image_callback(image):
     inpt=torch.Tensor(imageData.unsqueeze(0))
     inpt = Variable(inpt)
     out = model(inpt)
+    out = torch.exp(out)
     namenTest=[]
+    prop = 0.5
     for i in range(len(out)):
             a =0
             for proz in out[i]:
                 if float(proz)>0.8:
                     namenTest.append(classes[a])
+                    prop = proz
                 a=a+1
     if len(namenTest) == 0:
         namenTest.append("None")
     classifiedName_pub.publish(namenTest[0])
-    print(namenTest,out[i],classes)
+    print("Das erkannte Objekt ist: ["+str(namenTest[0])+"] mit einer Wahrscheinlichkeit von "+str(int(prop*100.0))+"% \n",out[i],classes)
     if i > 400:
         outWrite.release()
     else:

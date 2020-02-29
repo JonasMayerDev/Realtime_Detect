@@ -170,7 +170,7 @@ class Launchwindow:
 
         f = open(path2+"""/ros_ws/src/realtime_detect/launch/"""+self.lineEditName.text()+".launch", "a")
         f.write(""" <rosparam param="model_name">"""+str(modelname)+"""</rosparam> 
-        <node pkg="realtime_detect" name="Bilderkennung" type="Bilderkennung.py"> </node></launch>""")
+        <node pkg="realtime_detect" name="Bilderkennung" type="Bilderkennung.py" output="screen"> </node></launch>""")
         f.close()
 
         
