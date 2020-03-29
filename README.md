@@ -1,4 +1,4 @@
-# realtime_detect
+# Realtime_Detect
 Diese Software soll ein easy to use (, deutschsprachiges) KI-Model ausführungs programm darstellen, welche über ROS eine art Schnittstelle darstellt. Diese Software funktioniert zumindest zur Zeit ausschließlich mit Models des [AI_Model_Creator](https://github.com/BySuxax/AI_Model_Creator). Der [AI_Model_Creator](https://github.com/BySuxax/AI_Model_Creator) installiert realtime_detect normalerweise automatisch. <br>
 Wenn aber Fehler bei der Installation auftreten oder sonst etwas mit dieser Software getan werden soll, kann dieses programm auch manuell installiert werden.
 
