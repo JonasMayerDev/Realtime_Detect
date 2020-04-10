@@ -19,9 +19,9 @@ class Installer(QObject):
         self.progressBarInstall.emit(1)
 
         if checkBoxROS.isChecked():
-            answerRos=os.system("/bin/bash "+sys.path[0]+"/../realtime_detect/"+"InstallRos.bash "+sys.path[0]+"/..")
+            answerRos=os.system("/bin/bash "+sys.path[0]+"/../Realtime_Detect/"+"InstallRos.bash "+sys.path[0]+"/..")
             self.progressBarInstall.emit(50)
-            awnserRosVP3=os.system("/bin/bash "+sys.path[0]+"/../realtime_detect/"+"InstallRosVP3.bash "+sys.path[0]+"/..")
+            awnserRosVP3=os.system("/bin/bash "+sys.path[0]+"/../Realtime_Detect/"+"InstallRosVP3.bash "+sys.path[0]+"/..")
         else: 
             print("Bitte wählen sie eine Option")
         self.progressBarInstall.emit(100)
@@ -34,7 +34,7 @@ class Checkwindow:
         
         global checkBoxROS
 
-        self.Checkwindow = uic.loadUi(sys.path[0]+"/../realtime_detect/QtGui/Checkwindow.ui")
+        self.Checkwindow = uic.loadUi(sys.path[0]+"/../Realtime_Detect/QtGui/Checkwindow.ui")
         self.buttonAutoInstall = self.Checkwindow.pushButtonAuto
         self.buttonManuelInstall = self.Checkwindow.pushButtonManuel
         self.buttonWeiter = self.Checkwindow.pushButtonWeiter

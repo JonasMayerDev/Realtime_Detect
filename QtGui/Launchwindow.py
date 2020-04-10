@@ -2,14 +2,14 @@
 import sys,os
 from PyQt5.QtWidgets import QApplication, QMainWindow,QWidget,QCheckBox,QRadioButton,QSlider,QComboBox
 from PyQt5 import uic
-sys.path.append(sys.path[0]+"/../realtime_detect/QtGui")
+sys.path.append(sys.path[0]+"/../Realtime_Detect/QtGui")
 import Finishwindow 
 FinishWindow = Finishwindow.Finishwindow()
 
 class Launchwindow:
     
     def __init__(self):
-        self.Launchwindow = uic.loadUi(sys.path[0]+"/../realtime_detect/QtGui/Launchwindow.ui")
+        self.Launchwindow = uic.loadUi(sys.path[0]+"/../Realtime_Detect/QtGui/Launchwindow.ui")
 
         self.lineEditName = self.Launchwindow.lineEditName
         self.pushButtonSave = self.Launchwindow.pushButtonSave
@@ -129,7 +129,7 @@ class Launchwindow:
 
 
     def move_files_in_pack(self):
-        path = sys.path[0]+"/../realtime_detect"
+        path = sys.path[0]+"/../Realtime_Detect"
         path2 = sys.path[0]+"/.."
         cmd ="""chmod 700 """+path+"""/Bilderkennung.py &&
                 chmod 700 """+path+"""/KameraTreiberSys.py &&
