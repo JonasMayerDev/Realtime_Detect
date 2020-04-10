@@ -41,6 +41,7 @@ class Checkwindow:
         self.progressBarInstall =  self.Checkwindow.progress_bar
 
         checkBoxROS = self.Checkwindow.frame_2.findChild(QCheckBox,"check_box_ros")
+        checkBoxROS.setEnabled(False)
         
         self.allInstallesComplet = True
 
