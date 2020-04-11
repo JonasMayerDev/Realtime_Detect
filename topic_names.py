@@ -18,4 +18,4 @@ def set_exposure_topic():
 def set_gain_topic():
 	return "set_gain"
 def classified_name_topic():
-	return "classifiedName"
+	return "classified_Name"
