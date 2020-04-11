@@ -6,7 +6,7 @@ from PyQt5 import uic
 class Finishwindow:
     
     def __init__(self):
-        self.Finishwindow = uic.loadUi(sys.path[0]+"/../realtime_detect/QtGui/Finishwindow.ui")
+        self.Finishwindow = uic.loadUi(sys.path[0]+"/../Realtime_Detect/QtGui/Finishwindow.ui")
 
         
         self.pushButtonBeenden = self.Finishwindow.pushButton
