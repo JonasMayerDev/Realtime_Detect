@@ -26,6 +26,7 @@ cd src
 git clone -b melodic https://github.com/ros-perception/vision_opencv.git
 cd ..
 
+source /opt/ros/melodic/setup.bash
 catkin build cv_bridge
 source install/setup.bash --extend
 mv install/lib/python3/dist-packages ../lib/python3.6/dist-packages
