@@ -1,6 +1,26 @@
 # Realtime_Detect v 0.0.1 (Pre-Alpha)
 Diese Software soll ein easy to use (, deutschsprachiges) KI-Model ausführungs-programm darstellen, welche über ROS eine art Schnittstelle darstellt. Diese Software funktioniert zumindest zurzeit ausschließlich mit Models des [AI_Model_Creator](https://github.com/BySuxax/AI_Model_Creator). Der [AI_Model_Creator](https://github.com/BySuxax/AI_Model_Creator) installiert Realtime_Detect normalerweise automatisch. <br>
-Wenn aber Fehler bei der Installation auftreten oder sonst etwas mit dieser Software getan werden soll, kann dieses Programm auch manuell installiert werden.
+Wenn aber Fehler bei der Installation auftreten oder sonst etwas mit dieser Software getan werden soll, kann dieses Programm auch manuell installiert werden.<br><br>
+
+Veröffentlicht unter der GPL v3:
+AI_Model_Creator; an easy to use AI cumputer vision model creator.
+Copyright (C) 2020  Jonas Mayer
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by    
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>
+You can contact me by mail: bysuxaxofficial@gmail.com
+<br><br>
+
 
 **Kompatibilität** | **Sollte Funktionieren** | **Tut auf frischem System (getestet)**
 ------------ | ------------- | -------------
