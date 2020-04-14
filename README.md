@@ -28,7 +28,7 @@ Dazu bietet es sich an, dass ein **neuer Ordner erstellt wird** in welchen sie w
 Es kann sein, dass es nötig ist, erst Git zu installieren: `sudo apt install git`
 
 
-1. Als nächstes können sie, um das Programm zu starten **UND AUTOMATISCH GEBRAUCHTE LIBRARIES ZU INSTALLIEREN** folgenden command ausführen: <br>**(Ich übernehme keine Haftung für Systemschäden, Dateiverlust oder ähnlichem. Es werden durch python Libraries, Programmeigene Ordner gelöscht. Eine Fehlfunktion kann nicht ausgeschlossen werden!)** <br> `python3 Realtime_Detect/startAPI.py` <br> 
+1. Als nächstes können sie, um das Programm zu starten **UND AUTOMATISCH GEBRAUCHTE LIBRARIES ZU INSTALLIEREN (Alle automatisch installierten Libraries stehen im File: LicenseInformation.txt)**, folgenden command ausführen: <br>**(Ich übernehme keine Haftung für Systemschäden, Dateiverlust oder ähnlichem. Es werden durch python Libraries, Programmeigene Ordner gelöscht. Eine Fehlfunktion kann nicht ausgeschlossen werden!)** <br> `python3 Realtime_Detect/startAPI.py` <br> 
 **!! Achten sie auf die Konsole! Es kann sein, dass sie ihr Root Passwort eingeben müssen um die Libraries zu installieren !!** <br>Es sollte sich daraufhin ein Fenster zur Installationshilfe der ROS-libraries öffnen.
 
 1. Sie sollten einfach auf "Automatisch installieren" drücken. <br> --> **Es werden automatisch Libraries installiert. Achten sie auf die Konsole! Es kann sein, dass sie ihr Root Passwort eingeben müssen um die Libraries zu installieren!** <br>
@@ -55,9 +55,9 @@ Wenn sie auf weiter drücken müssen die normalerweise automatisch installierten
  <br> Sie können auch einfach über den folgenden Befehl die Ausgaben in der Konsole einsehen: <br>
  `rostopic echo /classified_Name`
  
- Wenn es irgendwelche Schwirigkeiten oder Fehler gibt, dann schreiben sie gerne einen Kommentar, um das Programm zu verbessern und ihnen weiterzuhelfen.
+ Wenn es irgendwelche Schwirigkeiten oder Fehler gibt, dann schreiben sie gerne einen Kommentar, um das Programm zu verbessern und ihnen weiterzuhelfen. Meine E-Mail: bysuxaxofficial@gmail.com
 
-
+All automatically installed Libraries are mentioned in "LicenseInformation.txt"
 
 
 
